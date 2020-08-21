@@ -1,242 +1,227 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<title>Responsive Email Design</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<style type="text/css">
+  
+  /* CLIENT-SPECIFIC STYLES ------------------- */
+  
+  #outlook a {
+    padding: 0; /* Force Outlook to provide a "view in browser" message */
+  } 
+  
+  .ReadMsgBody {
+    width: 100%; /* Force Hotmail to display emails at full width */
+  } 
+  
+  .ExternalClass {
+    width:100%; /* Force Hotmail to display emails at full width */
+  }
+  
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+    line-height: 100%; /* Force Hotmail to display normal line spacing */
+  }
+  
+  body, table, td, a { /* Prevent WebKit and Windows mobile changing default text sizes */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  table, td { /* Remove spacing between tables in Outlook 2007 and up */
+    mso-table-lspace: 0pt;
+    mso-table-rspace:0pt;
+  }
+  
+  img { /* Allow smoother rendering of resized image in Internet Explorer */
+    -ms-interpolation-mode: bicubic;
+  }
+
+  /* RESET STYLES --------------------------- */
+  
+  body { 
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+  }
+  
+  img { 
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  table {
+    border-collapse: collapse !important;
+  }
+
+  /* iOS BLUE LINKS */
+  
+  .apple-links a { 
+    color: #999999;
+    text-decoration: none;
+  }
+
+  /* MOBILE STYLES ------------------------ */
+  
+  @media screen and (max-width: 600px) {
+
+    td[class="logo"] img {
+      margin: 0 auto !important;
+    }
+
+    table[class="wrapper"] {
+      width: 100% !important;
+    } 
+
+    td[class="mobile-image-pad"] {
+      padding: 0 10px 0 10px !important;
+    }
+    
+    td[class="mobile-title-pad"] {
+      padding: 30px 10px 0px 10px !important;
+    }
+
+    td[class="mobile-text-pad"] {
+      padding: 10px 10px 10px 10px !important;
+    }
+
+    td[class="mobile-column-right"] {
+      padding-top: 20px !important;
+    }
+
+    img[class="fluid-image"] {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    td[class="hide"] {
+      display: none !important;
+    } 
+
+    td[class="mobile-button"] {
+      padding: 12px 60px 12px 60px !important;
+    }
+  
+    td[class="mobile-button"] a {
+      font-size: 24px !important;
+    }
+  }
+    
+</style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;title&gt;Responsive Email Design&lt;/title&gt;</p>
-<p class="p1">&lt;meta charset="utf-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width"&gt;</p>
-<p class="p1">&lt;style type="text/css"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* CLIENT-SPECIFIC STYLES ------------------- */</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>#outlook a {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0; /* Force Outlook to provide a "view in browser" message */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}<span class="Apple-converted-space"> </span></p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ReadMsgBody {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100%; /* Force Hotmail to display emails at full width */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}<span class="Apple-converted-space"> </span></p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ExternalClass {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width:100%; /* Force Hotmail to display emails at full width */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 100%; /* Force Hotmail to display normal line spacing */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>body, table, td, a { /* Prevent WebKit and Windows mobile changing default text sizes */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>-webkit-text-size-adjust: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>-ms-text-size-adjust: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>table, td { /* Remove spacing between tables in Outlook 2007 and up */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>mso-table-lspace: 0pt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>mso-table-rspace:0pt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>img { /* Allow smoother rendering of resized image in Internet Explorer */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>-ms-interpolation-mode: bicubic;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* RESET STYLES --------------------------- */</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>body {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: 100% !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width: 100% !important;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>img {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>border: 0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>outline: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>table {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-collapse: collapse !important;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* iOS BLUE LINKS */</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.apple-links a {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>color: #999999;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* MOBILE STYLES ------------------------ */</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>@media screen and (max-width: 600px) {</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>td[class="logo"] img {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>table[class="wrapper"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100% !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}<span class="Apple-converted-space"> </span></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>td[class="mobile-image-pad"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 0 10px 0 10px !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>td[class="mobile-title-pad"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 30px 10px 0px 10px !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>td[class="mobile-text-pad"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 10px 10px 10px !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>td[class="mobile-column-right"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding-top: 20px !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>img[class="fluid-image"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100% !important;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: auto !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>td[class="hide"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: none !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}<span class="Apple-converted-space"> </span></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>td[class="mobile-button"] {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 60px 12px 60px !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">  </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>td[class="mobile-button"] a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 24px !important;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body style="margin: 0; padding: 0;"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- CONTAINER TABLE --&gt;</p>
-<p class="p1">&lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;td align="center" style="padding: 20px 0 20px 0;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- WRAPPER TABLE --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- LOGO/PREHEADER TEXT --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td align="center" class="logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>&lt;img src="http://www.evolveincorporated.com/uploads/HurricaneReady.jpg" alt="Evolve logo" width="100%" border="0" style="display: block;" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/table&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/table&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/tr&gt;</p>
-<p class="p1">&lt;/table&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- CONTAINER TABLE --&gt;</p>
-<p class="p1">&lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;td align="center"<span class="Apple-converted-space">  </span>style="padding: 0px 0 20px 0;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- WRAPPER TABLE --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;table border="0" cellpadding="0" cellspacing="0"<span class="Apple-converted-space">  </span>width="100%"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">               </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td align="center" style="padding: 20px 0 10px 0; color: #000000; font-family: Arial, sans-serif; font-weight: bold; font-size: 32px; line-height: 36px;" class="mobile-title-pad"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                 </span>Greetings</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td align="left" style="padding: 10px 0 10px 0; color: #000000; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 20px;" class="mobile-text-pad"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>Thank you for being a valued client of Evolve! We greatly appreciate your business. There are news reports of a possible Hurricane that will make landfall in Houston/Louisiana this weekend.<span class="Apple-converted-space"> </span></p>
-<p class="p1">&lt;br&gt;&lt;br&gt;</p>
-<p class="p1">At Evolve we stand ready to help should emergencies occur. The 24x7 Evolve Command Center, 1-800-723-4849 and our technicians are ready to help in a moment’s notice. However, it is always best to be proactive and mitigate preventable downtime before it happens (fuel top offs, battery testings, etc).</p>
-<p class="p1">&lt;br&gt;&lt;br&gt;</p>
-<p class="p1">Evolve is pleased to offer a wide variety of solutions and services to help get you through the season. <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>&lt;td align="left" style="padding: 10px 0 10px 0; color: #000000; font-family: Arial, sans-serif; font-size: 14px; line-height: 26px;" class="mobile-title-pad"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;li&gt;Review and/or help build disaster recovery plans for mission-critical emergency power backup systems&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;li&gt;Fuel programs for emergency power generators&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;li&gt;Preventative maintenance programs for generators, UPS, and ATS systems&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;li&gt;Replacement systems for critical equipment such as generators and UPS&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;li&gt;Rental UPS and generators&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;li&gt;Disaster Recovery colocation services&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;li&gt;Data center expansion, migration, and fortification services&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;li&gt;Data center audits… and much more!&lt;/li&gt;</p>
-<p class="p1">&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                  </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;td align="left" style="padding: 10px 0 10px 0; color: #000000; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 20px;" class="mobile-text-pad"&gt;</p>
-<p class="p1">For more information or to schedule services from Evolve, please contact Terra at (832) 375-0099 or via email at EPM@evolveincorporated.com.</p>
-<p class="p1">&lt;br&gt;&lt;br&gt;</p>
-<p class="p1">Once again, thank you so much for being a valued client of Evolve and have a wonderful day.</p>
-<p class="p1">&lt;br&gt;&lt;br&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/tr&gt;</p>
-<p class="p1">&lt;!-- FOOTER --&gt;</p>
-<p class="p1">&lt;table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;td align="center" style="padding: 20px 0 20px 0;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- WRAPPER TABLE --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;table border="0" cellpadding="0" cellspacing="0" width="600" align="center" class="wrapper"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td align="center" style="padding: 2px 0 0px 0; color: #666666; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 18px;" class="mobile-text-pad"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="apple-links" style="color: #666666; text-decoration: none;"&gt;Evolve&lt;br&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>10555 Cossey Road<span class="Apple-converted-space"> </span></p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td align="center" style="padding: 2px 0 0 0; color: #666666; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 18px;" class="mobile-text-pad"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>Houston, TX 77070</p>
-<p class="p1">&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">           </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td align="center" style="padding: 2px 0 0 0; color: #666666; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 18px;" class="mobile-text-pad"&gt;</p>
-<p class="p1">Phone: (832) 375-0099</p>
-<p class="p1">&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;td align="center" style="padding: 2px 0 5px 0; color: #666666; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 18px;" class="mobile-text-pad"&gt;</p>
-<p class="p1">Emergency: (800) 723-4849</p>
-<p class="p1">&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tr&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/table&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/td&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/tr&gt;</p>
-<p class="p1">&lt;/table&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body style="margin: 0; padding: 0;">
+
+<!-- CONTAINER TABLE -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+  <tr>
+    <td align="center" style="padding: 20px 0 20px 0;">
+      <!-- WRAPPER TABLE -->
+      <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper">
+        <!-- LOGO/PREHEADER TEXT -->
+        <tr>
+          <td>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="center" class="logo">
+                  <img src="http://www.evolveincorporated.com/uploads/HurricaneReady.jpg" alt="Evolve logo" width="100%" border="0" style="display: block;" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- CONTAINER TABLE -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+  <tr>
+    <td align="center"  style="padding: 0px 0 20px 0;">
+      <!-- WRAPPER TABLE -->
+      <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper">
+        <tr>
+          <td>
+            <table border="0" cellpadding="0" cellspacing="0"  width="100%">
+               <tr>
+                <td align="center" style="padding: 20px 0 10px 0; color: #000000; font-family: Arial, sans-serif; font-weight: bold; font-size: 32px; line-height: 36px;" class="mobile-title-pad">
+                 Greetings
+                </td>
+              </tr>
+              <tr>
+                <td align="left" style="padding: 10px 0 10px 0; color: #000000; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 20px;" class="mobile-text-pad">
+                                Thank you for being a valued client of Evolve! We greatly appreciate your business. There are news reports of a possible Hurricane that will make landfall in Houston/Louisiana this weekend. 
+<br><br>
+At Evolve we stand ready to help should emergencies occur. The 24x7 Evolve Command Center, 1-800-723-4849 and our technicians are ready to help in a moment’s notice. However, it is always best to be proactive and mitigate preventable downtime before it happens (fuel top offs, battery testings, etc).
+<br><br>
+Evolve is pleased to offer a wide variety of solutions and services to help get you through the season.  
+                </td>
+              </tr>
+                <tr>
+                  <td align="left" style="padding: 10px 0 10px 0; color: #000000; font-family: Arial, sans-serif; font-size: 14px; line-height: 26px;" class="mobile-title-pad">
+                    <ul>
+  <li>Review and/or help build disaster recovery plans for mission-critical emergency power backup systems</li>
+  <li>Fuel programs for emergency power generators</li>
+  <li>Preventative maintenance programs for generators, UPS, and ATS systems</li>
+  <li>Replacement systems for critical equipment such as generators and UPS</li>
+  <li>Rental UPS and generators</li>
+  <li>Disaster Recovery colocation services</li>
+  <li>Data center expansion, migration, and fortification services</li>
+  <li>Data center audits… and much more!</li>
+</ul>
+                  </td>
+                </tr>
+                <tr>
+                <td align="left" style="padding: 10px 0 10px 0; color: #000000; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 20px;" class="mobile-text-pad">
+For more information or to schedule services from Evolve, please contact Terra at (832) 375-0099 or via email at EPM@evolveincorporated.com.
+<br><br>
+Once again, thank you so much for being a valued client of Evolve and have a wonderful day.
+<br><br>
+
+                </td>
+              </tr>
+<!-- FOOTER -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+  <tr>
+    <td align="center" style="padding: 20px 0 20px 0;">
+      <!-- WRAPPER TABLE -->
+      <table border="0" cellpadding="0" cellspacing="0" width="600" align="center" class="wrapper">
+        <tr>
+          <td align="center" style="padding: 2px 0 0px 0; color: #666666; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 18px;" class="mobile-text-pad">
+            <span class="apple-links" style="color: #666666; text-decoration: none;">Evolve<br>
+              10555 Cossey Road 
+            
+          </span>
+          </td>
+        </tr>
+          <tr>
+          <td align="center" style="padding: 2px 0 0 0; color: #666666; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 18px;" class="mobile-text-pad">
+  Houston, TX 77070
+</span>
+          </td>
+        </tr>
+           <tr>
+          <td align="center" style="padding: 2px 0 0 0; color: #666666; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 18px;" class="mobile-text-pad">
+Phone: (832) 375-0099
+</span>
+          </td>
+        </tr>
+          <tr>
+          <td align="center" style="padding: 2px 0 5px 0; color: #666666; font-family: Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 18px;" class="mobile-text-pad">
+Emergency: (800) 723-4849
+</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
 </body>
 </html>
+
